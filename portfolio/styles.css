@@ -1,0 +1,501 @@
+/* Style for the sidebar toggle button */
+.profile-toggle {
+    position: fixed; /* Keeps the button in a fixed position */
+    top: 20px; /* Adjust as needed to position the button */
+    right: 20px; /* Adjust as needed to position the button */
+    z-index: 1000; /* Ensures the button is above other elements */
+  }
+  
+  #sidebarToggle {
+    background-color: #333; /* Background color for the button */
+    color: #fff; /* Text color for the button */
+    border: none; /* Removes default button border */
+    padding: 10px 15px; /* Adjust padding as needed */
+    font-size: 24px; /* Adjust font size for visibility */
+    cursor: pointer; /* Adds a pointer cursor on hover */
+    border-radius: 5px; /* Optional: rounded corners */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Optional: shadow for better visibility */
+  }
+  
+  #sidebarToggle:hover {
+    background-color: #555; /* Changes color on hover for better visibility */
+  }
+  
+
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #333;
+    color: #fff;
+    transition: left 0.3s ease;
+    overflow: auto;
+    z-index: 1000;
+  }
+  
+  .sidebar.active {
+    left: 0;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar ul li {
+    padding: 15px;
+    border-bottom: 1px solid #444;
+  }
+  
+  .sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  #sidebarClose {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    background: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #sidebarClose:hover {
+    color: #ddd;
+  }
+  
+  
+  
+  
+  
+  /* Basic reset */
+body, h1, h2, p, ul, li, video, img, button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Cover video styles */
+.cover-video {
+  position: relative;
+  height: 60vh; /* Adjusted height */
+  overflow: hidden;
+}
+
+.cover-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cover-video .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.cover-video .profile-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.cover-video button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.cover-video button:hover {
+  color: #ff9800; /* Accent color on hover */
+}
+
+.cover-video .profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cover-video .profile-picture {
+  width: 150px; /* Increased size */
+  height: 150px; /* Increased size */
+  border-radius: 50%;
+  border: 4px solid #fff; /* Thicker border */
+  margin-bottom: 15px;
+  box-shadow: 0 0 20px 10px rgba(0, 123, 255, 0.6); /* Blue glow */
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.cover-video .profile-picture:hover {
+  box-shadow: 0 0 30px 15px rgba(255, 165, 0, 0.8); /* Orange glow on hover */
+}
+
+.cover-video .profile-info h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.cover-video .profile-info h2 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.cover-video .profile-info a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.cover-video .social-icons {
+  margin-top: 10px;
+}
+
+.cover-video .social-icons a {
+  margin: 0 10px;
+  color: #fff;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.cover-video .social-icons a:hover {
+  color: #ff9800; /* Accent color on hover */
+}
+
+/* About Me section styles */
+#about {
+  background: #f5f5f5;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+#about .about-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+}
+
+#about p {
+  font-size: 20px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+/* Superpowers section styles */
+#superpowers {
+  background: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#superpowers h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#superpowers .superpowers-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+#superpowers .superpower {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 24px;
+  color: #333;
+  transition: transform 0.3s, color 0.3s;
+}
+
+#superpowers .superpower i {
+  font-size: 48px;
+  margin-bottom: 10px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+#superpowers .superpower:hover i {
+  transform: scale(1.1);
+  color: #ff9800; /* Accent color on hover */
+}
+
+#superpowers .superpower:hover {
+  transform: scale(1.05);
+  color: #ff9800; /* Accent color on hover */
+}
+
+@media (max-width: 600px) {
+  #superpowers .superpowers-content {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on mobile */
+  }
+}
+/* Certifications section styles */
+#certifications {
+  background: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#certifications h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.certifications-slider {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 2px solid #ddd; /* Border for formal look */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; /* Rounded corners for images */
+}
+
+/* Optional: Styling for controls */
+button.prev, button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+button.prev:hover, button.next:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Contact section styles */
+#contact {
+  background: #f0f0f0; /* Light grey background for a subtle look */
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contact-box {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-form label {
+  text-align: left;
+  font-weight: 600;
+  color: #444;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  background: #d39925; /* WhatsApp green */
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #1da851; /* Darker green */
+}
+
+.contact-form button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  .contact-form .form-group {
+    flex-direction: column;
+  }
+  
+  .contact-form label {
+    font-size: 16px;
+  }
+  
+  .contact-form input, .contact-form textarea {
+    font-size: 16px;
+  }
+  
+  .contact-form button {
+    font-size: 18px;
+  }
+}
+
+/* Footer styles */
+footer {
+  position: relative;
+  color: #fff;
+}
+
+.footer-background {
+  background: url('img/page1.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 40px 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+  margin: 0 10px;
+}
+
+.footer-column h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  color: #FFA500; /* Orange color on hover */
+}
+
+.social-media {
+  display: flex;
+  gap: 15px;
+}
+
+.social-media a {
+  color: #fff;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #FFA500; /* Orange color on hover */
+}
+
+
+.footer-column p {
+  margin-bottom: 10px;
+}
+
+.footer-column p a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-column p a:hover {
+  color: #FFA500; /* Orange color on hover */
+}
+
